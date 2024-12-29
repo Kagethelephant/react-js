@@ -1,0 +1,90 @@
+/* Import all the necessary fonts */
+@font-face {
+  font-family: thin;
+  src: url("./assets/fonts/industry/IndustryTest-Medium.otf");
+}
+@font-face {
+  font-family: bold;
+  src: url("./assets/fonts/industry/IndustryTest-Ultra.otf");
+}
+
+/* A bunch of tasty mixins */
+
+/* Large font */
+@mixin font-large {
+  font-family: bold;
+  text-decoration: none;
+  font-size: 24pt;
+}
+/* Small font */
+@mixin font-small {
+  font-family: thin;
+  text-decoration: none;
+  font-size: 16pt;
+}
+/* Small bold font */
+@mixin font-small-bold {
+  font-family: bold;
+  text-decoration: none;
+  font-size: 16pt;
+}
+
+$color-bkg-nav: #101217;
+$color-text-dark: #101217;
+$color-text-light: white;
+$color-primary: #04B4DC;
+
+
+/* More specific things */
+
+/* This is for a navbar */
+@mixin style-banner{
+  width: 100%;
+  object-fit: cover;
+}
+
+@mixin style-nav {
+
+  $height: 100pt;
+  background-color: $color-bkg-nav;
+
+  display: flex;
+  justify-content: flex-end;
+  position: sticky;
+
+  top: 0;
+  left: 0;
+  height: $height;
+
+  a {
+    @include font-large;
+    color: $color-text-light;
+    display: flex;
+    max-height: 100%;
+    align-self: center;
+    padding: 3pt 5pt 3pt 5pt;
+    margin: 10pt 10pt 10pt 10pt;
+  }
+  & a.active {
+    color: $color-text-dark;
+    background-color: $color-primary;
+    border-radius: 4pt;
+  }
+
+  & a:not(.active):hover {
+    color: $color-primary;
+  }
+
+  & a.navImage {
+    background-color: transparent;
+    padding: 0pt;
+    margin: 0pt;
+    margin-right: auto;
+
+    img {
+      max-height: $height;
+      object-fit: contain;
+    }
+  }
+}
+

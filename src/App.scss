@@ -1,0 +1,77 @@
+@use "comp";
+/* Element styles */
+
+.App {
+  /* Make the background white */
+  background-color: #fefefe;
+  /* Make the app size the size of the window  */
+  height: 100%;
+  width: 100%;
+}
+body {
+  margin: 0;
+}
+nav {
+  @include comp.style-nav;
+}
+h1 {
+  @include comp.font-large;
+}
+img {
+  object-fit: cover;
+}
+
+
+/* This is all for the sandbox stuff */
+.Flex {
+  display: flex;
+  background-color: red;
+}
+
+.FlexBox {
+  display: flexbox;
+  background-color: navy;
+}
+
+.Block {
+  display: block;
+  background-color: blue;
+}
+
+.BlockInline {
+  display: inline-block;
+  background-color: yellow;
+}
+
+.Inline {
+  display: inline;
+  background-color: orange;
+}
+
+.Grid {
+  display: grid;
+  background-color: green;
+}
+
+.FlowRoot {
+  display: flow-root;
+  background-color: grey;
+}
+
+.Table {
+  display: table;
+  background-color: purple;
+}
+
+.Item {
+  background-color: aqua;
+  width: 150px;
+}
+
+.hide {
+  display: none;
+}
+
+.banner {
+  @include comp.style-banner;
+}
