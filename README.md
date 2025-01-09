@@ -8,7 +8,6 @@ enter this into the bash terminal. to run the project afterwords i think you onl
 ```bash
 npm create vite@latest
 npm install
-npm start
 npm run dev
 ```
 After you get the app working i would create the gh repo. It makes it a lot easier creating the
